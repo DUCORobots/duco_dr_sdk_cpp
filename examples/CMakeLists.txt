@@ -1,0 +1,5 @@
+find_package(Threads REQUIRED)
+add_executable(duco_move Move.cpp)
+add_executable(duco_components Components.cpp)
+target_link_libraries(duco_move PRIVATE DucoCobotAPI Threads::Threads)
+target_link_libraries(duco_components PRIVATE DucoCobotAPI Threads::Threads)
